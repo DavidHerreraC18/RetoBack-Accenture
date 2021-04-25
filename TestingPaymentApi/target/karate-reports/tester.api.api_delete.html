@@ -10,7 +10,7 @@
     <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
     <script type="text/javascript" src="res/bootstrap.min.js"></script>
     <script type="text/javascript" src="res/karate-report.js"></script>
-    <title>examples.api.api_delete</title>  
+    <title>tester.api.api_delete</title>  
   </head>
   <body>   
     <div id="root-container">
@@ -30,7 +30,7 @@
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2021-04-24 09:06:04 PM</div>
+    <div>2021-04-24 09:30:36 PM</div>
   </div>        
 </div>
 
@@ -45,7 +45,7 @@
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">examples/api/api_delete.feature</span><span class="feature-label">|</span>
+          <span class="feature-path">tester/api/api_delete.feature</span><span class="feature-label">|</span>
           <span class="feature-name">sample karate test script</span>
           <span class="feature-description"></span>
         </div>
@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>490</span>
+              <span>ms:</span>&nbsp;<span>532</span>
             </div>
           </div>
           <div class="step-row">
@@ -94,7 +94,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.4">21:06:04.213 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">21:30:36.392 karate.env system property was: null 
 </div>   
 
   
@@ -114,7 +114,7 @@
         <span>Given</span>&nbsp;<span>path &#39;/delete-clientOrder/1&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -142,7 +142,7 @@
         <span>When</span>&nbsp;<span>method delete</span>
       </div>
     </div>
-    <div class="time-cell passed">484</div>
+    <div class="time-cell passed">524</div>
   </div>
 
    
@@ -151,7 +151,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.8">21:06:04.608 request:
+  <div class="preformatted" data-parent="0.8">21:30:36.836 request:
 1 &gt; DELETE http://localhost:8080/api/delete-clientOrder/1
 1 &gt; Host: localhost:8080
 1 &gt; Connection: Keep-Alive
@@ -159,14 +159,14 @@
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:06:04.734 response time in milliseconds: 104
+21:30:36.965 response time in milliseconds: 106
 1 &lt; 200
 1 &lt; Content-Type: application/json;charset=UTF-8
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Sun, 25 Apr 2021 02:06:04 GMT
+1 &lt; Date: Sun, 25 Apr 2021 02:30:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;clientOrder&quot;:{&quot;orderProducts&quot;:[{&quot;product&quot;:{&quot;price&quot;:30000,&quot;name&quot;:&quot;Vinilo Edicion Estandar&quot;,&quot;id&quot;:1},&quot;quantity&quot;:3,&quot;cost&quot;:90000,&quot;id&quot;:2},{&quot;product&quot;:{&quot;price&quot;:70000,&quot;name&quot;:&quot;Vinilo Edicion Deluxe&quot;,&quot;id&quot;:2},&quot;quantity&quot;:1,&quot;cost&quot;:70000,&quot;id&quot;:3}],&quot;generationDate&quot;:&quot;2022-12-04T17:30:30&quot;,&quot;id&quot;:1,&quot;state&quot;:&quot;Completed&quot;,&quot;totalCost&quot;:190400,&quot;deliveryCost&quot;:0},&quot;userClient&quot;:{&quot;address&quot;:&quot;Carrera 11# 14-08&quot;,&quot;documentType&quot;:&quot;12345&quot;,&quot;actualClientOrder&quot;:null,&quot;document&quot;:&quot;CC&quot;,&quot;name&quot;:&quot;David Herrera&quot;,&quot;id&quot;:1,&quot;email&quot;:&quot;david18hc@gmail.com&quot;},&quot;generationDate&quot;:&quot;2021-04-24T21:04:55.749413&quot;,&quot;id&quot;:1,&quot;totalCost&quot;:112100.0}
+{&quot;clientOrder&quot;:{&quot;orderProducts&quot;:[{&quot;product&quot;:{&quot;price&quot;:30000,&quot;name&quot;:&quot;Vinilo Edicion Estandar&quot;,&quot;id&quot;:1},&quot;quantity&quot;:3,&quot;cost&quot;:90000,&quot;id&quot;:2},{&quot;product&quot;:{&quot;price&quot;:70000,&quot;name&quot;:&quot;Vinilo Edicion Deluxe&quot;,&quot;id&quot;:2},&quot;quantity&quot;:1,&quot;cost&quot;:70000,&quot;id&quot;:3}],&quot;generationDate&quot;:&quot;2022-12-04T17:30:30&quot;,&quot;id&quot;:1,&quot;state&quot;:&quot;Completed&quot;,&quot;totalCost&quot;:190400,&quot;deliveryCost&quot;:0},&quot;userClient&quot;:{&quot;address&quot;:&quot;Carrera 11# 14-08&quot;,&quot;documentType&quot;:&quot;12345&quot;,&quot;actualClientOrder&quot;:null,&quot;document&quot;:&quot;CC&quot;,&quot;name&quot;:&quot;David Herrera&quot;,&quot;id&quot;:1,&quot;email&quot;:&quot;david18hc@gmail.com&quot;},&quot;generationDate&quot;:&quot;2021-04-24T21:29:47.195572&quot;,&quot;id&quot;:1,&quot;totalCost&quot;:112100.0}
 </div>   
 
   
