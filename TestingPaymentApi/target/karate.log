@@ -1,0 +1,18 @@
+21:30:35.730 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:30:36.389 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:30:36.836 [main] DEBUG com.intuit.karate - request:
+1 > DELETE http://localhost:8080/api/delete-clientOrder/1
+1 > Host: localhost:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:30:36.962 [main] DEBUG com.intuit.karate - response time in milliseconds: 106
+1 < 200
+1 < Content-Type: application/json;charset=UTF-8
+1 < Transfer-Encoding: chunked
+1 < Date: Sun, 25 Apr 2021 02:30:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"clientOrder":{"orderProducts":[{"product":{"price":30000,"name":"Vinilo Edicion Estandar","id":1},"quantity":3,"cost":90000,"id":2},{"product":{"price":70000,"name":"Vinilo Edicion Deluxe","id":2},"quantity":1,"cost":70000,"id":3}],"generationDate":"2022-12-04T17:30:30","id":1,"state":"Completed","totalCost":190400,"deliveryCost":0},"userClient":{"address":"Carrera 11# 14-08","documentType":"12345","actualClientOrder":null,"document":"CC","name":"David Herrera","id":1,"email":"david18hc@gmail.com"},"generationDate":"2021-04-24T21:29:47.195572","id":1,"totalCost":112100.0}

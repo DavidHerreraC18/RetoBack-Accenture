@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: tester.api.ApiDeleteRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.043 s - in tester.api.ApiDeleteRunner
