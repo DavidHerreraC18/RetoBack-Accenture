@@ -18,17 +18,32 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-
+/**
+ * REST API for de deletion of Orders using completed orders
+ */
 @RestController
 @RequestMapping(value="/api")
 public class DeleteOrderController {
 
+    /**
+     * Service for OrderClient necessary for the
+     * validation, creation and modification of orders
+     */
     @Autowired
     private OrderService clientOrderService;
 
+    /**
+     * Service for Bill necessary for the
+     * validation, creation and modification of bills
+     */
     @Autowired
     private BillService billService;
     
+    /**
+     * Function that deletes the client order and returns a new bill if 12 hours or more have passed
+     * @param clientOrderId Long Client_Order_Id necessary to find the Order to delete.
+     * @return New Bill or null if 12 hours of less have passed
+     */
     @DeleteMapping(value="/delete-clientOrder/{clientOrderId}", produces = "application/json; charset=UTF-8")
     @ResponseStatus(HttpStatus.OK)
     public Bill deleteClientOrder(@PathVariable("clientOrderId") Long clientOrderId) {

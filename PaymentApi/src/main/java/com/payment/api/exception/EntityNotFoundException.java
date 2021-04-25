@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * The exception used to return a status and a message to the calling system.
- * @author norrisshelton
  */
 @SuppressWarnings("ClassWithoutNoArgConstructor")
 @ResponseStatus(HttpStatus.NOT_FOUND)

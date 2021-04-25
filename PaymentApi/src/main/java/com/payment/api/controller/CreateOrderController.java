@@ -19,21 +19,39 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
+/**
+ * REST API for de generation of Orders using users and services
+ */
 @RestController
 @RequestMapping(value="/api")
 public class CreateOrderController {
 
+    /**
+     * Service for UserClient necessary for the
+     * validation of the requested user
+     */
     @Autowired
     private UserClientService clientService;
 
+    /**
+     * Service for OrderClient necessary for the
+     * validation, creation and modification of orders
+     */
     @Autowired
     private OrderService clientOrderService;
 
+    /**
+     * Service for Bill necessary for the
+     * validation, creation and modification of bills
+     */
     @Autowired
     private BillService billService;
 
-
+    /**
+     * Function that creates the client order and returns the created bill
+     * @param userId Long User_Client Id necessary for the Actual ClientOrder.
+     * @return Created Bill
+     */
     @PostMapping(value="/create-clientOrder/{id}", produces = "application/json; charset=UTF-8")
     @ResponseStatus(HttpStatus.CREATED)
     public Bill createClientOrder(@PathVariable("id") Long userId) {

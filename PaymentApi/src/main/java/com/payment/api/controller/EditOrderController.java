@@ -25,12 +25,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping(value="/api")
 public class EditOrderController {
 
+    /**
+     * Service for OrderClient necessary for the
+     * validation, creation and modification of orders
+     */
     @Autowired
     private OrderService clientOrderService;
 
+    /**
+     * Service for Product necessary for the
+     * validation, creation and modification of products or orderproducts
+     */
     @Autowired
     private ProductService servicioProducto;
     
+    /**
+     * Function that deletes the client order and returns a new bill if 12 hours or more have passed
+     * @param clientOrderId Long Client_Order_Id necessary to find the Order to edit.
+     * @param updatedOrderProducts List<OrderProduct> List of new OrderProducts.
+     * @return Edited ClientOrder or null if not found or 5 hours or more have passed since the order was created
+     */
     @PutMapping(value="/edit-clientOrder/{clientOrderId}", produces = "application/json; charset=UTF-8")
     @ResponseStatus(HttpStatus.OK)
     public ClientOrder editClientOrder(@PathVariable("clientOrderId") Long clientOrderId, @RequestBody List<OrderProduct> updatedOrderProducts) {
